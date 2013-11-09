@@ -4,4 +4,5 @@ Events::Application.routes.draw do
   get "events/:id" => "events#show", as: "event"
   get "events/about" => "events#about", as: "about"
   get "events/:id/edit" => "events#edit", as: "edit_event"
+  patch "events/:id" => "events#update"
 end
