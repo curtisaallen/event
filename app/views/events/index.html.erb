@@ -5,6 +5,8 @@
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
+
+<%= link_to "Add New Event", new_event_path %>
 <ul>
 	<% @events.each do |event| %>
     <article>

@@ -23,5 +23,9 @@ class EventsController < ApplicationController
       redirect_to @event
     end
 
+    def new
+    	@event = Event.new
+    end
+
 
 end
