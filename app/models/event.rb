@@ -10,6 +10,9 @@ class Event < ActiveRecord::Base
     	with: /\w+\.(gif|jpg|png)\z/i,
     	message: "Must reference a GIF, JPG, or PNG image"
     }
+
+    has_many :registrations, dependent: :destroy
+
 	def free?
 		price.blank? || price.zero?
 	end
