@@ -24,7 +24,7 @@
       <p><%= pluralize(@event.capacity, 'spot') %></p>
       <%= link_to("Who is registrered?", event_registrations_path(@event)) %>
 </article>
-
+<%= link_to "Registrer!", new_event_registration_path(@event) %>
 <%= link_to "Edit", edit_event_path(@event) %>
 <%= link_to "Delete", event_path(@event), method: :delete, 
          data: {confirm: 'Are you sure?'} %>
