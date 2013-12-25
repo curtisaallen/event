@@ -16,4 +16,9 @@ class Registration < ActiveRecord::Base
 			  inclusion: { in: HOW_HEARD_OPTIONS }
 
   	belongs_to :event
+
+	def sold_out?
+		spots_left.zero?
+	end
+  	
 end

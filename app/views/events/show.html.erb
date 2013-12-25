@@ -22,9 +22,13 @@
       </table>
       <h3>Capacity</h3>
       <p><%= pluralize(@event.capacity, 'spot') %></p>
+
+
       <%= link_to("Who is registrered?", event_registrations_path(@event)) %>
+      <h3>Available Spots</h3>
+      <p><%= pluralize(@event.spots_left, 'spot') %> available</p>
 </article>
-<%= link_to "Registrer!", new_event_registration_path(@event) %>
+<%= register_link(@event) %>
 <%= link_to "Edit", edit_event_path(@event) %>
 <%= link_to "Delete", event_path(@event), method: :delete, 
          data: {confirm: 'Are you sure?'} %>
